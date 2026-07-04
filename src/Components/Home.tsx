@@ -1,6 +1,7 @@
 import Header from "./Header";
 import Footer from "./Footer";
 import { motion } from "framer-motion";
+import { ArrowRight, Download, Sparkles } from "lucide-react";
 
 
 export default function Home() {
@@ -85,21 +86,89 @@ overflow-hidden
 <section
 id="home"
 className="
+relative
 min-h-screen
 flex
 items-center
+overflow-hidden
 px-6
-pt-28
+md:px-10
+pt-32
+pb-20
 "
 >
 
 
+{/* Decorative grid pattern */}
+
+<div
+className="
+absolute
+inset-0
+pointer-events-none
+opacity-[0.06]
+dark:opacity-[0.14]
+"
+style={{
+backgroundImage:
+"linear-gradient(to right, #6366f1 1px, transparent 1px), linear-gradient(to bottom, #6366f1 1px, transparent 1px)",
+backgroundSize: "56px 56px",
+maskImage:
+"radial-gradient(ellipse 75% 60% at 50% 0%, black 40%, transparent 100%)",
+WebkitMaskImage:
+"radial-gradient(ellipse 75% 60% at 50% 0%, black 40%, transparent 100%)",
+}}
+/>
+
+
+{/* Ambient background glow */}
+
 <div className="
-max-w-6xl
+absolute
+-top-40
+-left-40
+w-[32rem]
+h-[32rem]
+bg-indigo-500/30
+rounded-full
+blur-[130px]
+pointer-events-none
+" />
+
+<div className="
+absolute
+top-1/3
+-right-40
+w-[28rem]
+h-[28rem]
+bg-purple-500/25
+rounded-full
+blur-[130px]
+pointer-events-none
+" />
+
+<div className="
+absolute
+bottom-0
+left-1/3
+w-[24rem]
+h-[24rem]
+bg-emerald-400/10
+rounded-full
+blur-[130px]
+pointer-events-none
+" />
+
+
+<div className="
+relative
+max-w-7xl
 mx-auto
+w-full
 grid
-md:grid-cols-2
-gap-14
+md:grid-cols-[1.15fr_0.85fr]
+gap-16
+md:gap-10
 items-center
 ">
 
@@ -114,179 +183,247 @@ initial="hidden"
 
 animate="visible"
 
-className="space-y-7"
+className="space-y-8 md:pr-6"
 
 >
 
 
-<p className="
-text-blue-600
-font-semibold
-text-lg
+{/* EYEBROW */}
+
+<div className="
+inline-flex
+items-center
+gap-2
+rounded-full
+border
+border-indigo-500/30
+bg-indigo-500/10
+backdrop-blur-sm
+px-4
+py-1.5
+">
+
+<Sparkles className="w-4 h-4 text-indigo-400" aria-hidden="true" />
+
+<span className="
+text-sm
+font-medium
+tracking-wide
+text-indigo-600
+dark:text-indigo-300
 ">
 
 Welcome to my portfolio
 
-</p>
+</span>
+
+</div>
 
 
 
 <h1 className="
-text-4xl
-md:text-6xl
-font-bold
-text-gray-800
+text-5xl
+sm:text-6xl
+md:text-7xl
+font-extrabold
+tracking-tight
+leading-[1.05]
+text-slate-900
 dark:text-white
-leading-tight
 ">
 
+Hi, I'm{" "}
 
-Hi, I'm
+<span className="
+bg-linear-to-r
+from-indigo-600
+via-purple-600
+to-emerald-400
+bg-clip-text
+text-transparent
+">
 
-<span className="text-blue-600">
-
- Maxwell
+Maxwell
 
 </span>
-
 
 </h1>
 
 
 
-
 <p className="
 text-lg
-text-gray-600
-dark:text-gray-300
+md:text-xl
+font-medium
+text-slate-600
+dark:text-zinc-400
 ">
 
-
-Software Engineer | React Developer |
-Photographer at RYSA |
-Team Lead at RYSA Media
-
+Software Engineer · React Developer · Photographer at RYSA · Team Lead at RYSA Media
 
 </p>
-
 
 
 
 <p className="
-text-gray-600
-dark:text-gray-400
+max-w-xl
+text-base
+md:text-lg
 leading-relaxed
+text-slate-600
+dark:text-zinc-400
 ">
 
-
-I build modern web applications,
-create digital solutions and use technology
-to support community development.
-
+I build modern web applications, craft digital solutions, and use
+technology to support community development — one project at a time.
 
 </p>
-
-
 
 
 
 {/* BUTTONS */}
 
+<div className="flex flex-wrap items-center gap-4 pt-2">
 
-<div className="flex flex-wrap gap-4">
 
-
-<motion.a
-
-whileHover={{
-scale:1.08
-}}
+<a
 
 href="#projects"
 
 className="
-bg-blue-600
-text-white
-px-7
-py-3
+group
+inline-flex
+items-center
+gap-2
 rounded-xl
+bg-linear-to-r
+from-indigo-600
+to-purple-600
+px-7
+py-3.5
+font-semibold
+text-white
 shadow-lg
-hover:bg-blue-700
+shadow-indigo-600/30
+transition-all
+duration-300
+ease-in-out
+hover:scale-105
+hover:shadow-xl
+hover:shadow-purple-600/40
+focus-visible:outline-none
+focus-visible:ring-2
+focus-visible:ring-indigo-500
+focus-visible:ring-offset-2
+focus-visible:ring-offset-gray-900
 "
 
 >
 
 View Projects
 
-</motion.a>
+<ArrowRight
+className="
+w-4
+h-4
+transition-transform
+duration-300
+ease-in-out
+group-hover:translate-x-1
+"
+aria-hidden="true"
+/>
+
+</a>
 
 
 
-
-
-<motion.a
-
-whileHover={{
-scale:1.08
-}}
+<a
 
 href="#contact"
 
 className="
-border
-border-blue-600
-text-blue-600
-dark:text-blue-400
-px-7
-py-3
+group
+inline-flex
+items-center
+gap-2
 rounded-xl
-hover:bg-blue-600
+border-2
+border-indigo-500/60
+px-7
+py-3.5
+font-semibold
+text-indigo-600
+dark:text-indigo-300
+transition-all
+duration-300
+ease-in-out
+hover:scale-105
+hover:bg-indigo-600
 hover:text-white
+hover:border-indigo-600
+focus-visible:outline-none
+focus-visible:ring-2
+focus-visible:ring-indigo-500
+focus-visible:ring-offset-2
+focus-visible:ring-offset-gray-900
 "
 
 >
 
 Contact Me
 
-</motion.a>
+</a>
 
 
 
+<a
 
-
-
-{/* CV DOWNLOAD */}
-
-<motion.a
-
-whileHover={{
-scale:1.08
-}}
-
-href="/max-cv.pdf"
+href="/max-CV.pdf"
 
 download
 
 className="
-bg-gray-900
-text-white
-px-7
-py-3
-rounded-xl
-shadow-lg
-hover:bg-black
+group
+inline-flex
+items-center
+gap-2
+px-2
+py-3.5
+font-semibold
+text-slate-600
+dark:text-zinc-300
+transition-all
+duration-300
+ease-in-out
+hover:text-indigo-500
+dark:hover:text-indigo-400
+focus-visible:outline-none
+focus-visible:ring-2
+focus-visible:ring-indigo-500
+rounded-md
 "
 
 >
 
+<Download
+className="
+w-4
+h-4
+transition-transform
+duration-300
+ease-in-out
+group-hover:-translate-y-0.5
+"
+aria-hidden="true"
+/>
+
 Download CV
 
-</motion.a>
-
+</a>
 
 
 </div>
-
 
 
 </motion.div>
@@ -294,29 +431,35 @@ Download CV
 
 
 
-
-
-
 {/* IMAGE */}
-
 
 <motion.div
 
 initial={{
+
 opacity:0,
-scale:0.7
+
+scale:0.85
+
 }}
 
 animate={{
+
 opacity:1,
+
 scale:1
+
 }}
 
 transition={{
-duration:1
+
+duration:0.9,
+
+delay:0.2
+
 }}
 
-className="flex justify-center"
+className="relative flex justify-center md:justify-end"
 
 >
 
@@ -324,43 +467,50 @@ className="flex justify-center"
 <div className="relative">
 
 
-
 <div className="
 absolute
 inset-0
-bg-blue-500
+bg-linear-to-br
+from-indigo-500
+to-purple-500
 blur-3xl
 opacity-40
 rounded-full
-">
-
-
-</div>
-
+" />
 
 
 <motion.div
 
 animate={{
-y:[0,-20,0]
+
+y:[0,-16,0]
+
 }}
 
 transition={{
-duration:4,
-repeat:Infinity
+
+duration:5,
+
+repeat:Infinity,
+
+ease:"easeInOut"
+
 }}
 
-className="
-relative
-p-4
-bg-white
-dark:bg-gray-800
-rounded-full
-shadow-2xl
-"
+className="relative"
 
 >
 
+
+<div className="
+relative
+p-2
+rounded-[2.25rem]
+bg-linear-to-br
+from-indigo-500
+via-purple-500
+to-emerald-400
+">
 
 <img
 
@@ -369,25 +519,97 @@ src="/MAX.jpg"
 alt="Maxwell Profile"
 
 className="
-w-72
-h-72
-md:w-96
-md:h-96
-rounded-full
+w-64
+h-64
+sm:w-80
+sm:h-80
+md:w-[22rem]
+md:h-[22rem]
+rounded-[2rem]
 object-cover
-border-4
-border-white
-dark:border-gray-700
-hover:scale-105
-transition
+shadow-2xl
+transition-transform
 duration-500
+ease-in-out
+hover:scale-[1.03]
 "
 
 />
 
+</div>
+
+
+
+{/* Glassmorphism floating card */}
+
+<div className="
+absolute
+-bottom-6
+-left-6
+sm:-left-10
+flex
+items-center
+gap-3
+rounded-2xl
+border
+border-white/20
+bg-white/10
+px-5
+py-4
+shadow-xl
+backdrop-blur-xl
+transition-all
+duration-300
+ease-in-out
+hover:-translate-y-1
+max-w-[13rem]
+sm:max-w-[15rem]
+">
+
+<span className="relative flex h-3 w-3 shrink-0">
+
+<span className="
+absolute
+inline-flex
+h-full
+w-full
+animate-ping
+rounded-full
+bg-emerald-400
+opacity-75
+" />
+
+<span className="
+relative
+inline-flex
+h-3
+w-3
+rounded-full
+bg-emerald-500
+" />
+
+</span>
+
+<div>
+
+<p className="text-sm font-semibold text-white">
+
+Available for work
+
+</p>
+
+<p className="text-xs text-zinc-300">
+
+Open to freelance & internships
+
+</p>
+
+</div>
+
+</div>
+
 
 </motion.div>
-
 
 
 </div>
@@ -396,17 +618,10 @@ duration-500
 </motion.div>
 
 
-
 </div>
+
 
 </section>
-
-
-
-
-
-
-
 
 
 
