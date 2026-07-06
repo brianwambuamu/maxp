@@ -336,7 +336,7 @@ export default function About() {
                     Zetech University
                   </h3>
                   <p className="text-base text-blue-700 font-semibold">
-                    Bachelor of Science in Software Engineering
+                    Diploma in Software Engineering
                   </p>
                   <p className="text-sm text-slate-500 mt-1">Graduate</p>
                 </div>

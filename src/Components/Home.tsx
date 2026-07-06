@@ -52,7 +52,7 @@ export default function Home() {
   ];
 
   const credentials = [
-    { label: "Education", value: "BSc Software Engineering" },
+    { label: "Education", value: "Dip Software Engineering" },
     { label: "University", value: "Zetech University" },
     { label: "Based in", value: "Nairobi, Kenya" },
     { label: "Experience", value: "3+ Years" },
