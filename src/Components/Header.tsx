@@ -71,16 +71,15 @@ export default function Header() {
                     relative inline-flex items-center gap-1 px-4 py-2 rounded-lg text-sm font-semibold transition-all duration-300
                     ${
                       isActive
-                        ? "text-blue-700 bg-blue-50"
+                        ? "text-blue-700"
                         : "text-slate-600 hover:text-blue-700 hover:bg-blue-50/50"
                     }
                   `}
                 >
-                  {link.name}
                   {isActive && (
                     <motion.div
                       layoutId="activeIndicator"
-                      className="absolute inset-0 bg-blue-50 rounded-lg border border-blue-100"
+                      className="absolute inset-0 bg-blue-50 rounded-lg border border-blue-100 -z-10"
                       transition={{ type: "spring", stiffness: 380, damping: 30 }}
                     />
                   )}
