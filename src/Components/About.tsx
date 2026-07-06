@@ -11,8 +11,6 @@ import {
   ArrowUpRight,
   Circle,
   BookOpen,
-  Briefcase,
-  Sparkles,
 } from "lucide-react";
 
 export default function About() {
@@ -67,15 +65,6 @@ export default function About() {
     { icon: Heart, label: "Tree Planting" },
     { icon: Users, label: "Youth Empowerment" },
   ];
-
-  const fadeUp = {
-    hidden: { opacity: 0, y: 30 },
-    visible: {
-      opacity: 1,
-      y: 0,
-      transition: { duration: 0.7, ease: [0.22, 1, 0.36, 1] },
-    },
-  };
 
   const stagger = {
     visible: {
@@ -145,7 +134,7 @@ export default function About() {
 
               <motion.h1 className="text-4xl sm:text-5xl md:text-6xl font-semibold tracking-[-0.03em] leading-[1.05] text-blue-950">
                 Hi, I'm{" "}
-                <span className="bg-gradient-to-r from-blue-600 via-blue-500 to-emerald-500 bg-clip-text text-transparent">
+                <span className="bg-linear-to-r from-blue-600 via-blue-500 to-emerald-500 bg-clip-text text-transparent">
                   Maxwell Mujukane
                 </span>
               </motion.h1>
@@ -195,7 +184,7 @@ export default function About() {
               className="md:col-span-5 flex justify-center"
             >
               <div className="relative">
-                <div className="absolute inset-0 bg-gradient-to-br from-blue-500 to-emerald-400 blur-3xl opacity-30 rounded-full" />
+                <div className="absolute inset-0 bg-linear-to-br from-blue-500 to-emerald-400 blur-3xl opacity-30 rounded-full" />
 
                 <motion.div
                   animate={{ y: [0, -15, 0] }}
@@ -236,7 +225,6 @@ export default function About() {
       <section id="roles" className="relative py-28 px-6 md:px-10 border-b border-blue-100">
         <div className="max-w-7xl mx-auto">
           <motion.div
-            
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true, margin: "-80px" }}
@@ -309,7 +297,6 @@ export default function About() {
       <section className="relative py-28 px-6 md:px-10 bg-blue-50/40 border-b border-blue-100">
         <div className="max-w-7xl mx-auto grid md:grid-cols-12 gap-12">
           <motion.div
-           
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true, margin: "-80px" }}
@@ -334,7 +321,6 @@ export default function About() {
           </motion.div>
 
           <motion.div
-            
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true, margin: "-80px" }}
@@ -383,7 +369,6 @@ export default function About() {
       <section className="relative py-28 px-6 md:px-10 border-b border-blue-100">
         <div className="max-w-7xl mx-auto grid md:grid-cols-12 gap-12">
           <motion.div
-            
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true, margin: "-80px" }}
@@ -416,7 +401,6 @@ export default function About() {
               {skills.map((skill) => (
                 <motion.div
                   key={skill.name}
-                  
                   whileHover={{ x: 4 }}
                   className="group flex items-center justify-between p-5 rounded-xl border border-blue-100 bg-white hover:border-blue-300 hover:shadow-md hover:shadow-blue-600/5 transition-all"
                 >
@@ -448,7 +432,6 @@ export default function About() {
       <section className="relative py-28 px-6 md:px-10 bg-blue-50/40 border-b border-blue-100">
         <div className="max-w-7xl mx-auto grid md:grid-cols-12 gap-12">
           <motion.div
-            
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true, margin: "-80px" }}
@@ -471,7 +454,6 @@ export default function About() {
           </motion.div>
 
           <motion.div
-            
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true, margin: "-80px" }}
@@ -528,11 +510,10 @@ export default function About() {
       <section className="relative py-28 px-6 md:px-10">
         <div className="max-w-5xl mx-auto">
           <motion.div
-          
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true, margin: "-80px" }}
-            className="relative overflow-hidden rounded-3xl bg-gradient-to-br from-blue-600 via-blue-700 to-blue-800 p-10 md:p-16 text-center shadow-2xl shadow-blue-600/20"
+            className="relative overflow-hidden rounded-3xl bg-linear-to-br from-blue-600 via-blue-700 to-blue-800 p-10 md:p-16 text-center shadow-2xl shadow-blue-600/20"
           >
             <div className="absolute -top-20 right-0 w-120 h-80 bg-emerald-400/20 blur-3xl pointer-events-none" />
             <div className="absolute -bottom-20 left-0 w-120 h-80 bg-blue-400/30 blur-3xl pointer-events-none" />

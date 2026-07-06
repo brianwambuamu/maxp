@@ -126,15 +126,6 @@ export default function Contact() {
     },
   ];
 
-  const fadeUp = {
-    hidden: { opacity: 0, y: 30 },
-    visible: {
-      opacity: 1,
-      y: 0,
-      transition: { duration: 0.7, ease: [0.22, 1, 0.36, 1] },
-    },
-  };
-
   return (
     <div className="bg-white min-h-screen text-slate-900 antialiased selection:bg-blue-500/20 selection:text-blue-900">
       <Header />
@@ -150,7 +141,7 @@ export default function Contact() {
         }}
       >
         {/* Dark overlay */}
-        <div className="absolute inset-0 bg-gradient-to-b from-blue-950/90 via-blue-900/85 to-blue-950/90" />
+        <div className="absolute inset-0 bg-linear-to-b from-blue-950/90 via-blue-900/85 to-blue-950/90" />
 
         {/* Soft dot pattern */}
         <div
@@ -209,7 +200,7 @@ export default function Contact() {
                   something great
                 </span>
                 <br />
-                <span className="bg-gradient-to-r from-emerald-300 via-blue-300 to-emerald-300 bg-clip-text text-transparent">
+                <span className="bg-linear-to-r from-emerald-300 via-blue-300 to-emerald-300 bg-clip-text text-transparent">
                   together.
                 </span>
               </h1>
@@ -235,7 +226,7 @@ export default function Contact() {
             className="md:col-span-5 space-y-4"
           >
             {/* Main Info Card */}
-            <div className="relative bg-gradient-to-br from-blue-600 via-blue-700 to-blue-800 rounded-3xl p-8 text-white shadow-2xl shadow-blue-600/30 overflow-hidden">
+            <div className="relative bg-linear-to-br from-blue-600 via-blue-700 to-blue-800 rounded-3xl p-8 text-white shadow-2xl shadow-blue-600/30 overflow-hidden">
               {/* Decorative glows */}
               <div className="absolute -top-20 -right-20 w-40 h-40 bg-emerald-400/20 blur-3xl rounded-full pointer-events-none" />
               <div className="absolute -bottom-20 -left-20 w-40 h-40 bg-blue-400/30 blur-3xl rounded-full pointer-events-none" />
@@ -439,9 +430,9 @@ export default function Contact() {
                     }`}
                   >
                     {status.type === "success" ? (
-                      <CheckCircle className="w-5 h-5 flex-shrink-0 mt-0.5" />
+                      <CheckCircle className="w-5 h-5 shrink-0 mt-0.5" />
                     ) : (
-                      <AlertCircle className="w-5 h-5 flex-shrink-0 mt-0.5" />
+                      <AlertCircle className="w-5 h-5 shrink-0 mt-0.5" />
                     )}
                     <p className="text-sm font-medium">{status.message}</p>
                   </motion.div>
