@@ -497,7 +497,7 @@ export default function Home() {
 
               <div className="flex flex-wrap items-center justify-center gap-3">
                 <a
-                  href="#contact"
+                  href="/contact"
                   className="group inline-flex items-center gap-2 rounded-full bg-white px-7 py-3.5 text-sm font-semibold text-blue-700 transition-all duration-300 hover:bg-emerald-50 hover:text-emerald-700 hover:gap-3"
                 >
                   Start a conversation
