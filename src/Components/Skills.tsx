@@ -73,15 +73,6 @@ export default function Projects() {
     { image: "/photo6.jpg", title: "Community Storytelling" },
   ];
 
-  const fadeUp = {
-    hidden: { opacity: 0, y: 30 },
-    visible: {
-      opacity: 1,
-      y: 0,
-      transition: { duration: 0.7, ease: [0.22, 1, 0.36, 1] },
-    },
-  };
-
   const stagger = {
     visible: {
       transition: {
@@ -105,7 +96,7 @@ export default function Projects() {
         }}
       >
         {/* Dark overlay for readability */}
-        <div className="absolute inset-0 bg-gradient-to-b from-blue-950/90 via-blue-900/85 to-blue-950/90" />
+        <div className="absolute inset-0 bg-linear-to-b from-blue-950/90 via-blue-900/85 to-blue-950/90" />
 
         {/* Soft dot pattern */}
         <div
@@ -164,7 +155,7 @@ export default function Projects() {
                   community platforms
                 </span>
                 <br />
-                <span className="bg-gradient-to-r from-emerald-300 via-blue-300 to-emerald-300 bg-clip-text text-transparent">
+                <span className="bg-linear-to-r from-emerald-300 via-blue-300 to-emerald-300 bg-clip-text text-transparent">
                   & creative projects.
                 </span>
               </motion.h1>
@@ -205,7 +196,6 @@ export default function Projects() {
       <section className="relative py-28 px-6 md:px-10 border-b border-blue-100">
         <div className="max-w-7xl mx-auto">
           <motion.div
-         
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true, margin: "-80px" }}
@@ -317,7 +307,6 @@ export default function Projects() {
       <section className="relative py-28 px-6 md:px-10 bg-blue-50/40 border-b border-blue-100">
         <div className="max-w-7xl mx-auto">
           <motion.div
-        
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true, margin: "-80px" }}
@@ -348,10 +337,9 @@ export default function Projects() {
             viewport={{ once: true, margin: "-80px" }}
             className="grid sm:grid-cols-2 md:grid-cols-3 gap-6"
           >
-            {gallery.map((item, index) => (
+            {gallery.map((item) => (
               <motion.div
                 key={item.title}
-              
                 whileHover={{ y: -8 }}
                 className="group relative bg-white border border-blue-100 rounded-2xl overflow-hidden hover:border-blue-300 hover:shadow-xl hover:shadow-blue-600/10 transition-all duration-300"
               >
@@ -394,7 +382,6 @@ export default function Projects() {
       <section className="relative py-28 px-6 md:px-10">
         <div className="max-w-5xl mx-auto">
           <motion.div
-           
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true, margin: "-80px" }}
